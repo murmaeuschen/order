@@ -3,7 +3,9 @@ window.My =
   Collections: {}
   Views: {}
   Routers: {}
-  initialize: -> alert 'Hello from Backbone!'
+  initialize: ->
+    new My.Routers.Orders()
+    Backbone.history.start()	
 
 $(document).ready ->
   My.initialize()
