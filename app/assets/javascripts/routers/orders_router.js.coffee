@@ -4,7 +4,8 @@ class My.Routers.Orders extends Backbone.Router
   	'orders/:id' : 'show'
 
   index: ->
-  	alert "home page"
+  	view = new My.Views.OrdersIndex()
+  	$('#container').html(view.render().el)
 
   show: (id) ->
     alert "Order #{id}"	
