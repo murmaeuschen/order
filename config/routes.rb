@@ -1,5 +1,8 @@
 My::Application.routes.draw do
-  resources :orders
+  
+  scope "api" do
+    resources :orders
+  end  
 
   resources :itemstables
 

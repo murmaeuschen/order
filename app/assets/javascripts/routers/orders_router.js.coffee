@@ -3,8 +3,12 @@ class My.Routers.Orders extends Backbone.Router
   	'': 'index'
   	'orders/:id' : 'show'
 
+  initialize: ->
+    @collection = new My.Collections.Orders();
+    @collection.fetch()	    
+
   index: ->
-  	view = new My.Views.OrdersIndex()
+  	view = new My.Views.OrdersIndex(collection: @collection)  	
   	$('#container').html(view.render().el)
 
   show: (id) ->

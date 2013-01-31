@@ -1,1 +1,107 @@
 <p>template</p>
+<ul>
+<% for order in @collection.models: %>
+  <li><%= order.get('order_number')%></li>
+<% end %>  
+</ul>
+
+<a href="#">Create New Order</a>
+
+		<div  class="panel">
+			<div>
+				<h4>Search by</h4>
+			</div>
+		<div><label>Filter orders by:</label>
+			<select id="filter">
+				<option>Status</option>
+				<option>Role</option>
+			</select>
+			<select id = "filter_options">
+				<option> </option>
+				<!--<option>Ordered</option>
+				<option>Pending</option>
+				<option>Delivered</option>
+
+				<option>Merchandiser</option>
+				<option>Administrator</option>
+				<option>Supervisor</option>	-->
+			</select>
+		</div>
+		<div>
+			<label>Search for orders by:</label>
+			<select>
+				<option>Order Name</option>
+				<option>Status</option>
+				<option>Assignee</option>
+			</select>
+			<input type="text"/>
+			
+			<button id="search">
+				Apply
+			</button>
+		</div>
+		</div>
+
+		<table id="orders">
+			<tr>
+				<th>Order Name</th>
+				<th>Total Price</th>
+				<th>Max Discount</th>
+				<th>Delivery Date</th>
+				<th>Status</th>
+				<th>Assignee</th>
+				<th>Role</th>
+				<th>Edit</th>
+				<th>Delete</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+				<td>7</td>
+				<td>7</td>
+				<td>8</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+				<td>7</td>
+				<td>7</td>
+				<td>8</td>
+			</tr>
+
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+				<td>7</td>
+				<td>7</td>
+				<td>8</td>
+			</tr>
+
+		</table>
+
+		<div class="paging-buttons">
+			<button id="first">
+				First
+			</button>
+			<button id="backward">
+				Backward
+			</button>
+			<button id="forward">
+				Forward
+			</button>
+			<button id="last">
+				Last
+			</button>
+		</div>
