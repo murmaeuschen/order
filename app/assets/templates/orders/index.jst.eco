@@ -1,48 +1,26 @@
-<p>template</p>
-<ul>
-<% for order in @collection.models: %>
-  <li><%= order.get('order_number')%></li>
-<% end %>  
-</ul>
-
+<form class="form-horizontal">
 <a href="#">Create New Order</a>
 
-		<div  class="panel">
-			<div>
-				<h4>Search by</h4>
-			</div>
-		<div><label>Filter orders by:</label>
-			<select id="filter">
-				<option>Status</option>
-				<option>Role</option>
-			</select>
-			<select id = "filter_options">
-				<option> </option>
-				<!--<option>Ordered</option>
-				<option>Pending</option>
-				<option>Delivered</option>
+<div class="panel">
+        <h4>
+            Search by
+        </h4>
+        <label>Filter orders by:</label><br>
+        <form action="/" class="filters form-inline">
+            <select id="filter">
+            	<option value="Status">Status</option>
+            	<option value="Status">Role</option>                
+            </select> 
+            
+            <select id="filter_options">
+            	<option></option>                
+            </select> 
+            <input type="text" id="filterText" name="request"> <input type="submit" id="search" class= "btn btn-primary"value="Apply">
+        </form>
+</div>
 
-				<option>Merchandiser</option>
-				<option>Administrator</option>
-				<option>Supervisor</option>	-->
-			</select>
-		</div>
-		<div>
-			<label>Search for orders by:</label>
-			<select>
-				<option>Order Name</option>
-				<option>Status</option>
-				<option>Assignee</option>
-			</select>
-			<input type="text"/>
-			
-			<button id="search">
-				Apply
-			</button>
-		</div>
-		</div>
 
-		<table id="orders">
+  		<table id="orders">
 			<tr>
 				<th>Order Name</th>
 				<th>Total Price</th>
@@ -105,3 +83,4 @@
 				Last
 			</button>
 		</div>
+</form>		
