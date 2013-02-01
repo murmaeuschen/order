@@ -1,26 +1,50 @@
-<form class="form-horizontal">
-<a href="#">Create New Order</a>
+<div class="container-fluid">
+    <section class="row-fluid">
+        <a href="#">Create New Order</a>
+    </section>
+
+
 
 <div class="panel">
-        <h4>
-            Search by
-        </h4>
-        <label>Filter orders by:</label><br>
-        <form action="/" class="filters form-inline">
-            <select id="filter">
+        <h4>Search by</h4>
+
+        <form action="/" class="filters form-horizontal">
+          <fieldset>
+           <div class="control-group">
+            <label for="filter" class="control-label">Filter orders by:</label>
+            <div class="controls">
+              <select id="filter">
             	<option value="Status">Status</option>
             	<option value="Status">Role</option>                
-            </select> 
+              </select>            
             
-            <select id="filter_options">
+              <select id="filter_options">
             	<option></option>                
-            </select> 
-            <input type="text" id="filterText" name="request"> <input type="submit" id="search" class= "btn btn-primary"value="Apply">
+              </select>
+            </div>               
+           </div>
+          </fieldset>  
+
+          <fieldset>
+           <div class="control-group">
+            <label for="search_orders" class="control-label">Search for orders by:
+            </label>
+            <div class="controls">
+              <select id="search_orders">
+				<option>Order Name</option>
+				<option>Status</option>
+				<option>Assignee</option>
+			  </select>         
+
+			  <input type="text" id="filterText" name="request"> <input type="submit" id="search" class= "btn btn-primary"value="Apply">      
+            </div>   
+           </div>
+          </fieldset>  
         </form>
 </div>
 
 
-  		<table id="orders">
+  		<table id="orders" class="table table-condensed">
 			<tr>
 				<th>Order Name</th>
 				<th>Total Price</th>
@@ -69,18 +93,20 @@
 
 		</table>
 
-		<div class="paging-buttons">
-			<button id="first">
-				First
-			</button>
-			<button id="backward">
-				Backward
-			</button>
-			<button id="forward">
-				Forward
-			</button>
-			<button id="last">
-				Last
-			</button>
-		</div>
-</form>		
+		<div class="pagination pagination-centered" id="paging-buttons">       
+    	  <ul class="pager">           
+                    <li>
+                        <a href="#" id="first">First</a>
+                    </li>
+                    <li>
+                        <a href="#" id="backward">&larr; Backward</a>
+                    </li>
+                    <li>
+                        <a href="#" id="forward">Forward &rarr;</a>
+                    </li>
+                    <li>
+                        <a href="#" id="last">Last</a>
+                    </li>
+                </ul>            
+         </div>
+</div>		
