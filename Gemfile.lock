@@ -34,7 +34,12 @@ GEM
       ejs
       jquery-rails
       rails (>= 3.1)
+    better_errors (0.3.2)
+      coderay (>= 1.0.0)
+      erubis (>= 2.7.0)
+    binding_of_caller (0.6.8)
     builder (3.0.4)
+    coderay (1.0.8)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -42,7 +47,15 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.4.0)
+    columnize (0.3.6)
     commonjs (0.2.6)
+    debugger (1.2.4)
+      columnize (>= 0.3.1)
+      debugger-linecache (~> 1.1.1)
+      debugger-ruby_core_source (~> 1.1.7)
+    debugger-linecache (1.1.2)
+      debugger-ruby_core_source (>= 1.1.1)
+    debugger-ruby_core_source (1.1.7)
     eco (1.0.0)
       coffee-script
       eco-source
@@ -131,7 +144,10 @@ PLATFORMS
 
 DEPENDENCIES
   backbone-on-rails
+  better_errors
+  binding_of_caller
   coffee-rails (~> 3.2.1)
+  debugger
   execjs
   jquery-rails
   less-rails

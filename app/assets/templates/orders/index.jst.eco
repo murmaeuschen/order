@@ -15,11 +15,13 @@
             <div class="controls">
               <select id="filter">
             	<option value="Status">Status</option>
-            	<option value="Status">Role</option>                
+            	<option value="Role">Role</option>                
               </select>            
             
               <select id="filter_options">
-            	<option></option>                
+            	<option>Ordered</option>
+				<option>Pending</option>
+				<option>Delivered</option>               
               </select>
             </div>               
            </div>
@@ -45,6 +47,7 @@
 
 
   		<table id="orders" class="table table-condensed">
+		  <tbody>
 			<tr>
 				<th>Order Name</th>
 				<th>Total Price</th>
@@ -55,42 +58,9 @@
 				<th>Role</th>
 				<th>Edit</th>
 				<th>Delete</th>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-				<td>4</td>
-				<td>5</td>
-				<td>6</td>
-				<td>7</td>
-				<td>7</td>
-				<td>8</td>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-				<td>4</td>
-				<td>5</td>
-				<td>6</td>
-				<td>7</td>
-				<td>7</td>
-				<td>8</td>
-			</tr>
-
-			<tr>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-				<td>4</td>
-				<td>5</td>
-				<td>6</td>
-				<td>7</td>
-				<td>7</td>
-				<td>8</td>
-			</tr>
-
+			</tr>			
+			
+          </tbody>
 		</table>
 
 		<div class="pagination pagination-centered" id="paging-buttons">       

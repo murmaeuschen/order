@@ -32,6 +32,15 @@ gem 'twitter-bootstrap-rails'
 
 gem 'less-rails'
 
+gem 'jquery-rails'
+
+
+group :development do
+  gem 'debugger'
+  gem 'better_errors'
+  gem 'binding_of_caller'  
+end
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
