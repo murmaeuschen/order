@@ -1,4 +1,4 @@
 class Itemstable < ActiveRecord::Base
-  belongs_to :item
+  has_many :items
   attr_accessible :price_per_line, :quantity
 end
