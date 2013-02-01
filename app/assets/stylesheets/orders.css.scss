@@ -60,6 +60,15 @@ h1 {
   overflow: auto;
 }
 
+.items_panel { 
+  margin-top: 15px;
+  margin-bottom: 5px;
+  padding: 5px;
+  border: solid 1px gray;  
+  border-radius : 10px;
+  overflow: auto;
+}
+
 .paging {
   float:right;
 }
@@ -69,11 +78,11 @@ h1 {
 }
 
 
-.panel h4 {
+.panel h4, .panel h5, .items_panel h5 {
     background-color: white;
     display: block;
     margin-top: -20px;
-    width: 120px;
+    width: 140px;
     position: absolute;
 }
 
@@ -102,3 +111,10 @@ ul.hmenu {
 ul.hmenu li {
   display: inline;  
 }
+
+.ui-datepicker-trigger {
+ margin-bottom: 10px;
+ margin-left: 2px;
+ height: 28px
+}
+

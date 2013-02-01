@@ -4,6 +4,7 @@ class My.Views.OrdersIndex extends Backbone.View
 
   events:
     'change #filter': 'fillFilterOptions'
+    'click #order_create_button': 'createOrder'
 
   initialize: ->
     @collection.on('reset', @render, @)
@@ -12,6 +13,9 @@ class My.Views.OrdersIndex extends Backbone.View
   	$(@el).html(@template(orders: @collection))
   	@collection.each(@appendOrder)
   	@
+
+  createOrder: ->
+    Backbone.history.navigate("/new", true)	
 
   appendOrder: (order) =>
     view = new My.Views.OrdersOrder(model: order)

@@ -1,12 +1,10 @@
 <div class="container-fluid">
     <section class="row-fluid">
-        <a href="#">Create New Order</a>
+        <a id="order_create_button" href="#">Create New Order</a>
     </section>
 
-
-
 <div class="panel">
-        <h4>Search by</h4>
+        <h5>Search by</h5>
 
         <form action="/" class="filters form-horizontal">
           <fieldset>
@@ -77,6 +75,6 @@
                     <li>
                         <a href="#" id="last">Last</a>
                     </li>
-                </ul>            
+          </ul>            
          </div>
 </div>		

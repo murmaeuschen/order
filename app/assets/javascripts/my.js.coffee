@@ -5,7 +5,7 @@ window.My =
   Routers: {}
   initialize: ->
     new My.Routers.Orders()
-    Backbone.history.start()	
+    Backbone.history.start(pushState: true)	
 
 $(document).ready ->
   My.initialize()

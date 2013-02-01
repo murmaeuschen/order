@@ -34,6 +34,8 @@ gem 'less-rails'
 
 gem 'jquery-rails'
 
+gem 'jquery-ui-rails'
+
 
 group :development do
   gem 'debugger'
