@@ -4,7 +4,7 @@ $(function(){
     format: "dd/mm/yyyy",
     showOn: "button",   
     buttonText: "Click to show the calendar",
-    buttonImage: "assets/calendar.gif",
+    buttonImage: "/assets/calendar.gif",
     buttonImageOnly: true
    });
 });
