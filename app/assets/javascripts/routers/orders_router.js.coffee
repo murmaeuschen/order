@@ -23,7 +23,7 @@ class My.Routers.Orders extends Backbone.Router
   edit: (id) ->
     order = @collection.get(id)
     console.log(order)
-    view = new My.Views.OrdersEdit({model: order})  #todo
-    #view = new My.Views.OrdersNew({collection: @collection})
+    view = new My.Views.OrdersEdit({model: order})
+   
     
   

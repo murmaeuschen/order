@@ -11,5 +11,4 @@ class My.Views.OrdersOrder extends Backbone.View
     @
 
   goToEdit: ->   
-    Backbone.history.navigate("#{@model.get('id')}/edit", true)
-    #Backbone.history.navigate("/new", true)  	
+    Backbone.history.navigate("#{@model.get('id')}/edit", true)   

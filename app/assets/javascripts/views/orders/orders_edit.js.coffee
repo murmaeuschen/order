@@ -2,7 +2,7 @@ class My.Views.OrdersEdit extends Backbone.View
 
   el: '#container'
 
-  template: JST['orders/new'] #todo
+  template: JST['orders/edit'] 
 
   initialize: ->
     @model.on('change', @render, @)
