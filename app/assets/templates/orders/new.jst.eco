@@ -1,1 +1,119 @@
-<p>ORDER</p>
+<h4>This page is appointed for selecting and buying products</h4>
+<div  class="items_panel">
+<h4>Items Selection</h4>
+<button>Add Item</button>
+<select class="limit">
+	<option>show 10 lines</option>
+	<option>show 25 lines</option>
+</select>
+<table id="items_table">
+<tr>
+	<th>Item Number</th>
+	<th>Item Name</th>
+	<th>Item Description</th>
+	<th>Dimension</th>
+	<th>Price</th>
+	<th>Quantity</th>
+	<th>Price per Line</th>
+	<th>Edit</th>
+	<th>Delete</th> 
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>7</td>
+<td>8</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>7</td>
+<td>8</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>7</td>
+<td>8</td>
+</tr>
+
+</table>
+
+<div class="paging-buttons">
+<button id="first">First</button>
+<button id="backward">Backward</button>
+<button id="forward">Forward</button>
+<button id="last">Last</button>
+</div>
+
+</div>	
+
+
+<div  class="total_panel">
+  <div class ="totals" >
+  	<h4>Totals</h4>
+  <div>	
+  	<label for="order_number">Order Number</label>
+  	<input name="order_number">
+  </div>
+  <div>
+    <label for="status">Status</label>
+  	<input name="status">
+  </div>
+  <div>
+    <label for="total_price">Total Price</label>
+  	<input name="total_price">
+  </div>
+  <div>
+    <label for="total_number_of_items">Number of Items</label>
+  	<input name="total_number_of_items">
+  </div>
+  <div>
+    <label for="date_of_ordering">Date of Ordering</label>
+  	<input name="date_of_ordering">
+  </div>
+  <div>
+    <label for="pref_delivery_date">Pref. delivery date</label>
+  	<input name="pref_delivery_date">
+  </div>
+  <div>
+    <label for="delivery_date">Delivery date</label>
+  	<input name="delivery_date">
+  </div>
+  <div>
+    <label for="assignee">Assignee</label>
+  	<input name="assignee">
+  </div>
+
+  </div>	  	
+</div>	
+
+<div class="card_panel">
+  <div class ="cards" >
+  	<h4>Card Info</h4>
+    <div>	
+  	  <label for="credit_card_type">Credit Card Type</label>
+  	  <input name="credit_card_type">
+    </div>
+    <div>
+      <label for="credit_card_number">Credit Card Number</label>
+  	  <input name="status">
+    </div>
+  </div>	
+</div>	

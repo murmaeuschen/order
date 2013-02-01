@@ -1,8 +1,8 @@
 class My.Routers.Orders extends Backbone.Router
   routes:
-    '': 'index'
-    'orders/:id': 'show'
-    'new': 'newOrder'
+    ""           : "index"
+    "orders/:id" : "show"
+    "new"        : "newOrder"
     
   initialize: ->
     @collection = new My.Collections.Orders();
@@ -16,5 +16,6 @@ class My.Routers.Orders extends Backbone.Router
     alert "Order #{id}"
 
   newOrder: ->
-    view = new My.Views.OrdersNew({collection: @collection})  	
+    view = new My.Views.OrdersNew({collection: @collection})
+    
   
