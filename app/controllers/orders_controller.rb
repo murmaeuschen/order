@@ -13,9 +13,22 @@ class OrdersController < ApplicationController
   def show
     @order = Order.find(params[:id])
 
+    # @all_items = @order.itemstables.includes(:item)
+    # @all_items = @all_items.inject([]) do |a, i|
+    #   a << {
+    #     item: {
+    #       name: i.item.item_name,
+    #     },  
+    #     order_item: {
+    #       quantity: i.quantity
+    #     }
+    #   }
+    # end
+
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @order }
+      format.json { render json: { order: @order } }
+      # format.json { render json: { order: @order, order_items: @all_items.to_json().html_safe } }
     end
   end
 
