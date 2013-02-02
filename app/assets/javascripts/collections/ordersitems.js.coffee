@@ -2,7 +2,7 @@ class My.Collections.Ordersitems extends Backbone.Collection
 
   model: My.Models.Ordersitem
 
-  url: '/api/orders'
+  url: '/api/itemstables'
 
   initialize: (order_id) ->
     @order_id = order_id

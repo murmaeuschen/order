@@ -1,6 +1,6 @@
 class My.Models.Ordersitem extends Backbone.Model
   url: ->
     if @id?
-      "/api/orders/#{@id}"
+      "/api/itemstables/#{@id}"
     else
-      "/api/orders"
+      "/api/itemstables"
