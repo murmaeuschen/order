@@ -7,5 +7,6 @@ class My.Views.OrdersItem extends Backbone.View
   #  @collection.on('reset', @render, @)
   
   render: ->
-    $(@el).html(@template(items: @collection))    
+    console.log @model
+    $(@el).html(@template(item: @model))    
     @ 

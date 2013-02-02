@@ -1,9 +1,9 @@
 class My.Models.Order extends Backbone.Model
   url: ->
     if @id?
-      "/api/itemstables/#{@id}"
+      "/api/orders/#{@id}"
     else
-      "/api/itemstables"
+      "/api/orders"
 
   #parse: (resp, options) ->
   # 	@items = new ItemsCollection(resp.items)

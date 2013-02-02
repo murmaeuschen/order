@@ -17,6 +17,5 @@ class Order < ActiveRecord::Base
                   :start_date, 
                   :status, 
                   :total_num_of_items, 
-                  :total_price,
-                  :itemstable_id
+                  :total_price
 end
