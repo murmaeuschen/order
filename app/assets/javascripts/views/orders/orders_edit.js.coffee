@@ -27,7 +27,7 @@ class My.Views.OrdersEdit extends Backbone.View
     $(@el).find('#date_of_ordering').html(@model.attributes.date_of_ordering)
     $(@el).find('#pref_delivery_date').val(@model.attributes.pref_delivery_date)
     $(@el).find('#delivery_date').html(@model.attributes.delivery_date)
-    $(@el).find('#assignee').val(@model.attributes.assignee)       
+    $(@el).find('#assignee').val(@model.attributes.role)       
     $(@el).find('#credit_card_type').val(@model.attributes.credit_card_type)
   
   fillTable: ->     
