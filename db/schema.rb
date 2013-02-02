@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130131203456) do
+ActiveRecord::Schema.define(:version => 20130202022857) do
 
   create_table "items", :force => true do |t|
     t.string   "item_name"
@@ -23,14 +23,13 @@ ActiveRecord::Schema.define(:version => 20130131203456) do
   end
 
   create_table "itemstables", :force => true do |t|
-    t.integer  "item_id"
     t.integer  "quantity"
     t.decimal  "price_per_line"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+    t.integer  "order_id"
+    t.integer  "item_id"
   end
-
-  add_index "itemstables", ["item_id"], :name => "index_itemstables_on_item_id"
 
   create_table "orders", :force => true do |t|
     t.string   "order_number"
@@ -49,12 +48,10 @@ ActiveRecord::Schema.define(:version => 20130131203456) do
     t.date     "expiry_date"
     t.date     "start_date"
     t.string   "issue_number"
-    t.integer  "itemstable_id"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
   end
 
-  add_index "orders", ["itemstable_id"], :name => "index_orders_on_itemstable_id"
   add_index "orders", ["user_id"], :name => "index_orders_on_user_id"
 
 end
