@@ -4,6 +4,7 @@ class My.Routers.Orders extends Backbone.Router
     "orders/:id" : "show"
     "new"        : "newOrder"
     ":id/edit"   : "edit"
+    ":id/show"   : "show"
    
     
   initialize: ->
@@ -13,17 +14,19 @@ class My.Routers.Orders extends Backbone.Router
   index: ->
     view = new My.Views.OrdersIndex(collection: @collection)  	
     $('#container').html(view.render().el)
-
+  
   show: (id) ->
-    alert "Order #{id}"
+    $.getJSON "/api/orders/"+id+".json", (data) ->
+      console.log(data)
+    order = @collection.get(id)    
+    view = new My.Views.OrdersEdit({model: order, details: "details"})
 
   newOrder: ->
     view = new My.Views.OrdersNew({collection: @collection})
 
-  edit: (id) ->
-    order = @collection.get(id)
-    console.log(order)
-    view = new My.Views.OrdersEdit({model: order})
+  edit: (id) ->    
+    order = @collection.get(id)   
+    view = new My.Views.OrdersEdit(model: order)
    
     
   

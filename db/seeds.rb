@@ -7,19 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-#Order.create(order_number: '000002', 
-#	         total_price: 10,
-#	         max_discount: 0,
-#	         status: "Ordered",	        
-#	         role: "Administrator")
-
-
-#item1 = Item.create(item_name: "Orange1", item_description: "Orange1", dimension: "Box", price: 10)
-
-#item2 = Item.create(item_name: "Onion1", item_description: "Onion1", dimension: "Box", price: 2)
-#
-#item = Item.find(5)
-
 order=Order.create(order_number: '000003', 
 	         total_price: 10,
 	         total_num_of_items: 5,
@@ -39,7 +26,9 @@ items = Item.create([{ item_name: "Orange1", item_description: "Orange1", dimens
 #						 {price_per_line: 10, quantity: 1, item_id: items[1].id}])
 
 itemstable1 = Itemstable.create(price_per_line: 50, quantity: 1, item_id: items[0].id)
+itemstable2 = Itemstable.create(price_per_line: 20, quantity: 2, item_id: items[1].id)
 
 order.itemstables<<itemstable1
+order.itemstables<<itemstable2
 
 

@@ -14,10 +14,13 @@ class ItemstablesController < ApplicationController
   # GET /itemstables/1.json
   def show
     @itemstable = Itemstable.find(params[:id])
+    @order = Order.find(@itemstable.order_id)  
+
+    @all_items = @order.items.select("item_id,item_name,item_description,dimension,price,quantity,price_per_line")
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @itemstable }
+      format.json { render json: @all_items }
     end
   end
 

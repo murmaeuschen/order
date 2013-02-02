@@ -10,8 +10,52 @@ class My.Views.OrdersEdit extends Backbone.View
     @fillFields()
 
   render: ->    
+    #@ordersitems = new My.Collections.Ordersitems();
+    #@ordersitems.fetch()
+    #console.log @ordersitems
+    #@ordersitems.each(@appendOrdersitem)   
+
+    $.getJSON "/api/orders/"+@model.attributes.id+".json", (data) ->
+      for x of data
+        item = data[x]
+        row = $("<tr/>")
+        column = $("<td>") 
+        column.html item.item_id
+        row.append column
+        column = $("<td/>")
+        column.html item.item_name
+        row.append column
+        column = $("<td/>")
+        column.html item.item_description
+        row.append column
+        column = $("<td/>")
+        column.html item.dimension
+        row.append column
+        column = $("<td/>")
+        column.html item.price
+        row.append column
+        column = $("<td/>")
+        column.html item.quantity
+        row.append column
+        column = $("<td/>")
+        column.html item.price_per_line
+        row.append column
+        column = $("<td/>")
+        column.append "<div id='edit' class= 'btn'><i class='icon-edit'></i></div>"
+        row.append column
+        column = $("<td/>")
+        column.append "<div id='destroy' class='btn'><i class='icon-trash'></i></div>"        
+        row.append column
+        $("#items_table tbody").append row  
+
+
     $(@el).html(@template(order: @model))    
     @
+
+  #appendOrdersitem: (ordersitem) ->
+  #  console.log ordersitem.get('item_description')
+  #  view = new My.Views.OrdersItem(model: ordersitem)
+  #  @$('tbody').append(view.render().el)      
   
   fillFields: ->    
     $(@el).find('#order_number').val(@model.attributes.order_number)
@@ -22,5 +66,5 @@ class My.Views.OrdersEdit extends Backbone.View
     $(@el).find('#pref_delivery_date').val(@model.attributes.pref_delivery_date)
     $(@el).find('#delivery_date').html(@model.attributes.delivery_date)
     $(@el).find('#assignee').val(@model.attributes.assignee)       
-    $(@el).find('#credit_card_type').val(@model.attributes.credit_card_type)    
-    #$(@el).find('input:radio:checked').val(@model.attributes.role)
+    $(@el).find('#credit_card_type').val(@model.attributes.credit_card_type)  
+   
