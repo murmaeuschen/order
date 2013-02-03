@@ -2,7 +2,7 @@ class My.Views.OrdersNew extends Backbone.View
 
   el: '#container'
 
-  template: JST['orders/details']
+  template: JST['orders/new']
 
   
   initialize: ->

@@ -2,10 +2,9 @@ My::Application.routes.draw do
   
   scope "api" do
     resources :orders do
-      resources :order_items
-      resources :itemstables
+      resources :order_items      
     end
-    resources :itemstables
+    resources :order_items
   end    
 
   resources :items

@@ -36,11 +36,27 @@ class My.Views.OrdersEdit extends Backbone.View
     #console.log @ordersitems
     #@ordersitems.each(@appendOrdersitem) 
 
-    $.getJSON "/api/orders/"+@model.attributes.id+".json", (data) ->
-      for x of data
-        view = new My.Views.OrdersItem(model: data[x])
-        $('#items_table tbody').append(view.render().el)
+    #$.getJSON "/api/orders/"+@model.attributes.id+".json", (data) ->
+    #  for x of data
+    #    view = new My.Views.OrdersItem(model: data[x])
+    #    $('#items_table tbody').append(view.render().el)
    
+    @collection_of_order_items = @model.order_items()
+    
+    console.log  @collection_of_order_items
+    view = new My.Views.OrderItemsIndex(collection: @collection_of_order_items)    
+    $('#items_table').html(view.render().el)
+
+
+    #console.log @collection_of_order_items
+
+    #@collection_of_order_items.each(@appendOrderItem)   
+
     #for x of @model.order_items()
-    #  view = new My.Views.Ordersitem(model: data[x])
+    #  console.log x  
+    #  view = new My.Views.OrdersItem(model: data[x])
     #  $('#items_table tbody').append(view.render().el)
+
+  #appendOrderItem: (order_item) =>
+  #  view = new My.Views.OrdersItem(model: order_item)
+  #  $('#items_table tbody').append(view.render().el)     
