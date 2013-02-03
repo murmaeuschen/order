@@ -16,7 +16,7 @@ $(function(){
 		This page is appointed for selecting and buying products
 	   </h4>
     </section>
-<form id="new_order">		
+<form id="edit_order">		
 	<div class="items_panel">
         <h5>Items Selection</h5>
 		<div class="row-fluid">
@@ -144,16 +144,16 @@ $(function(){
 
 		  </fieldset>	  	 
         </div>
-	   </div>	    
-	
-</form>
+	   </div>	
 
-<div class="row-fluid">
-  <div class="span3 offset9" >
+	<div class="row-fluid">
+    <div class="span3 offset9" >
 		<input type="submit" class="btn btn-primary" value="Save">
 		<button id="order" class="btn btn-primary">Order</button>
 		<button id="cancel" class="btn btn-primary">Cancel</button>
-  </div>
-</div>
+    </div>
+  </div>        
+	
+</form>
 
 </div>

@@ -4,8 +4,8 @@ class My.Views.OrdersOrder extends Backbone.View
   tagName: 'tr'
 
   events:
-    'click #edit': 'goToEdit'
-    #'click #destroy': ''  #todo  
+    'click #edit'   : 'goToEdit'
+    'click #destroy': 'destroy' 
    
   render: ->
     $(@el).html(@template(order: @model))
@@ -14,4 +14,6 @@ class My.Views.OrdersOrder extends Backbone.View
   goToEdit: ->   
     Backbone.history.navigate("#{@model.get('id')}/edit", true)
 
-  
+  destroy: ->
+    @model['url'] = "/api/orders/#{@model.get('id')}"
+    @model.destroy() if confirm 'The order will be deleted from the List of Orders. Are you sure you want to proceed?'

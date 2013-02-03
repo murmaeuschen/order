@@ -40,7 +40,8 @@ gem 'jquery-ui-rails'
 group :development do
   gem 'debugger'
   gem 'better_errors'
-  gem 'binding_of_caller'  
+  gem 'binding_of_caller'
+  gem 'thin'  
 end
 
 # To use ActiveModel has_secure_password
