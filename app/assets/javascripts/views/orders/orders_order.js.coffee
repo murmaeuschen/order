@@ -5,7 +5,7 @@ class My.Views.OrdersOrder extends Backbone.View
 
   events:
     'click #edit': 'goToEdit'
-    'click #destroy': 'goToShow'  #todo  
+    #'click #destroy': ''  #todo  
    
   render: ->
     $(@el).html(@template(order: @model))
@@ -14,5 +14,4 @@ class My.Views.OrdersOrder extends Backbone.View
   goToEdit: ->   
     Backbone.history.navigate("#{@model.get('id')}/edit", true)
 
-  goToShow: ->   
-    Backbone.history.navigate("#{@model.get('id')}/show", true)    
+  

@@ -11,14 +11,11 @@ class OrdersController < ApplicationController
   # GET /orders/1
   # GET /orders/1.json
   def show
-    @order = Order.find(params[:id])       
-    
-    @all_items = @order.items.select("item_id,item_name,item_description,dimension,price,quantity,price_per_line")
+    @order = Order.find(params[:id])        
     
     respond_to do |format|
       format.html # show.html.erb      
-      format.json { render json: @all_items }
-      #format.json { render json: { order: @order, order_items: @all_items.to_json().html_safe } }
+      format.json { render json: @order}      
     end
   end
 
