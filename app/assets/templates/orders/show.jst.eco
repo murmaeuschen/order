@@ -147,4 +147,13 @@ $(function(){
 	   </div>	    
 	
 </form>
+
+<div class="row-fluid">
+  <div class="span3 offset9" >
+		<input type="submit" class="btn btn-primary" value="Save">
+		<button id="order" class="btn btn-primary">Order</button>
+		<button id="cancel" class="btn btn-primary">Cancel</button>
+  </div>
+</div>
+
 </div>
