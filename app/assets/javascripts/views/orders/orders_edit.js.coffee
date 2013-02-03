@@ -16,4 +16,5 @@ class My.Views.OrdersEdit extends Backbone.View
   fillTable: ->          
     @collection_of_order_items = @model.order_items()
     view = new My.Views.OrderItemsIndex(collection: @collection_of_order_items)    
-    $('#items_table').html(view.render().el)
+    $('#table_order_items').html(view.render().el)
+     

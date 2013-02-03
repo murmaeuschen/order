@@ -16,6 +16,7 @@
 //= require twitter/bootstrap
 //= require underscore
 //= require backbone
+//= require jquery.validate.js
 //= require my
 //= require_tree ../templates
 //= require_tree ./models

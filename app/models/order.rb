@@ -18,4 +18,12 @@ class Order < ActiveRecord::Base
                   :status, 
                   :total_num_of_items, 
                   :total_price
+
+  validates :order_number,       :presence => true, :uniqueness => true  
+  #validates :credit_card_type,   :presence => true  
+  #validates :credit_card_number, :presence => true, :length => {:is => 16}
+  #validates :cvv2,               :presence => true, :length => {:is => 3}
+  #validates :expiry_date,        :presence => true
+  #validates :issue_number,       :length => {:is => 1}
+          
 end
