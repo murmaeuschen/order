@@ -36,8 +36,6 @@ class My.Views.OrdersEdit extends Backbone.View
     #console.log @ordersitems
     #@ordersitems.each(@appendOrdersitem) 
 
-    $.getJSON "/api/orders/"+@model.attributes.id+".json", (data) ->
-      for x of data
-        view = new My.Views.OrdersItem(model: data[x])
-        $('#items_table tbody').append(view.render().el)
-    
+    for x of @model.order_items()
+      view = new My.Views.Ordersitem(model: data[x])
+      $('#items_table tbody').append(view.render().el)
